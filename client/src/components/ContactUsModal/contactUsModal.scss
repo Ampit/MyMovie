@@ -1,0 +1,29 @@
+.about {
+    background-color: white;
+    width: 28vw;
+    border-radius: 4px;
+    color: black;
+    &__heading{
+        text-align: center;
+        border-bottom: 2px solid red;
+        margin: 6px 0 12px 0;
+        padding: 12px 0 6px 0;
+        color: red;
+        font-size: 32px;
+    }
+    &__container{
+        padding: 6px;
+    }
+    &__subheading{
+        text-align: center;
+        text-decoration: underline;
+        color: red;
+        margin: 0 0 12px 0;
+    }
+    &__description {
+        text-align: center;
+        margin-top: 8px;
+        margin-bottom: 18px;
+        line-height: 22px;
+    }
+}

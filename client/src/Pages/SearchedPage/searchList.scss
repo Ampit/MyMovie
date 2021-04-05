@@ -1,0 +1,13 @@
+.searched__container {
+    padding: 0 32px;
+    &--header{
+        color: #f4181c;
+        margin: 32px 0 0 0;
+        & span {
+            
+            font-weight: bold;
+            font-style: italic;
+            text-transform: uppercase;
+        }
+    }
+}

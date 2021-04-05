@@ -1,0 +1,75 @@
+
+.contact-form{
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    padding: 40px;
+    &__heading{
+        text-align: center;
+        margin: 6px 0 24px 0;
+        padding: 12px 0 6px 0;
+        font-size: 32px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #830E08;
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__input{
+        width: 25vw;
+        border: 1px solid rgba(22,33,92,.15);
+        border-radius: 8px;
+        outline: 0;
+        padding: 10px;
+        margin: 6px 0 16px 0;
+        
+        font-size: 1.5rem;
+        color: #830E08;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        &::placeholder {
+            color: #830E08;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.5rem;
+        }
+    }
+    &__submit{
+            width: 14.25rem;
+            height: 3.44rem;
+            border: 1px solid rgba(22,33,92,.15);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.31rem;
+            margin: 24px 0;
+            border-radius: 10px;
+            color: #ffffff;
+            color: #830E08;
+            font-size: 1.5rem;
+            align-self: center;
+            cursor: pointer;
+    }
+    &__textarea{
+        width: 25vw;
+        height: 100px;
+        border: 1px solid rgba(22,33,92,.15);
+        outline: 0;
+        border-radius: 8px;
+        padding: 10px;
+        margin-top: 10px;
+        color: #830E08;
+        font-size: 1.5rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+
+
+/* set border on inputbox and textarea when hove#830E08 with mouse */
+.contact-form__input:hover, textarea:hover {
+    border: 1px solid rgba(0,0,0,0.5);
+}
+/* set all the placeholders of the page */
+
+
+
+
+

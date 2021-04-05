@@ -1,0 +1,123 @@
+@import "../../styles/partials/resets";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/breakpoints";
+
+body {
+  background-color: black;
+}
+
+.carousel {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80vw;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  opacity: 0.16 !important;
+}
+
+.hero {
+  &__image {
+    height: 400px;
+    width: 80vw;
+    border-radius: 20px;
+    margin: 0 auto;
+  }
+  &__details {
+    position: absolute;
+    top: 0px;
+    width: 320px;
+    height: 100%;
+    padding: 0 0 0 100px;
+    color: white;
+    background-color: black;
+    text-align: left;
+    border-radius: 10px;
+    background: linear-gradient(90deg,rgba(0,0,0, .8) 95%, transparent);
+    &--heading {
+      margin-top: 80px;
+      margin-bottom: 10px;
+    }
+    &--ellipsis {
+      width: 250px;
+      width: 280px;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-size: 14px;
+      line-height: 18px;
+      margin: 2px 0 16px 0;
+    }
+  }
+}
+
+.genre {
+  padding: 32px 32px;
+  @include mobile{
+    padding: 16px;
+  }
+  &__container {
+    margin-top: 16px;
+    color: white;
+    width: 100%;
+    text-align: center;
+  }
+  &__heading {
+    display: inline-block;
+    padding: 15px;
+    border: 2px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  &__list {
+    transition: all 2s linear;
+    transition-property: opacity, height, margin;
+    display: flex;
+    padding: 24px;
+    flex-wrap: wrap;
+    height: 250px;
+    justify-content: space-evenly;
+    align-content: space-between;
+    @include mobile{
+      height: 350px;
+      padding:16px;
+    }
+    &--border {
+      cursor: pointer;
+      width: 230px;
+      border: 2px solid red;
+      padding:10px 4px;
+      border-radius: 5px;
+      @include mobile{
+        font-size: 16px;
+        width: 150px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+  &__hide {
+    opacity: 0;
+    height: 0px;
+    margin: 0 auto;
+    pointer-events: none;
+  }
+  &__sub-heading {
+    text-align: left;
+    color: white;
+    font-size: 2rem;
+    padding: 24px 24px 0px 0px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  &__result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &--margin{
+      margin-bottom: 15px;
+    }
+  }
+}

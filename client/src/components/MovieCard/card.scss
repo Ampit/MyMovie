@@ -1,0 +1,94 @@
+@import "../../styles/partials/resets";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/breakpoints";
+
+.card {
+  margin-right: 15px;
+  background-color: transparent;
+  cursor: pointer;
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+  @include mobile{
+    width: 175px;
+    height: 250px;
+  }
+  &__flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+  }
+  &__image {
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    @include mobile{
+      width: 175px;
+      height: 250px;
+    }
+  }
+}
+
+.card:hover .card__flipper {
+  transform: rotateY(180deg);
+}
+
+.card__details {
+  box-sizing: border-box;
+  width: max-content;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: scroll;
+  white-space: initial;
+  text-align: center;
+  border-radius: 10px;
+  background: linear-gradient(0deg,rgba(0,0,0, .9) 35%, transparent);
+  color: white;
+  transform: rotateY(180deg);
+  @include mobile{
+    font-size: 12px;
+  }
+  &__container{
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 84%;
+    bottom: -100px;
+    text-align: left;
+    padding-left: 10px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    z-index: 2;
+    @include mobile{
+      top: 100px;
+    }
+
+  }
+  &--heading{
+    width:  100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  &--overview {
+    margin-top: 10px;
+    font-size: .8rem;
+    width:  100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 18px;
+  }
+}

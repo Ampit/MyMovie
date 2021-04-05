@@ -1,0 +1,73 @@
+.mood {
+  &__container {
+    padding: 60px;
+    color: white;
+  }
+  &__heading {
+    text-align: center;
+    margin-bottom: 24px;
+    color: white;
+    & span {
+      color: red;
+    }
+  }
+  &__answers {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding: 15px 50px;
+    border: 2px solid transparent;
+    margin-bottom: 25px;
+    background: radial-gradient(circle, rgba(111,15,15,1) 16%, rgba(18,15,16,1) 86%);   
+    font-size: 1.45rem;
+    cursor: pointer;
+  }
+  &__result {
+    margin-top: 60px;
+    padding: 32px;
+  }
+}
+
+.position {
+  position: relative;
+}
+
+.mood__images {
+  margin-top: 50px;
+  &--container {
+    margin: auto;
+    width: 80%;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    & img {
+      width: 400px;
+      height: 270px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+    }
+  }
+  &--button {
+    display: contents;
+    border: none;
+    cursor: pointer;
+    &--text {
+      position: absolute;
+      font-size: 1.75rem;
+      left: 0;
+      right: 0;
+      color: red;
+    }
+  }
+}
+.body {
+  height: 110vh;
+  background-image: linear-gradient(
+    to bottom,
+    #000000,
+    #22080d,
+    #380a11,
+    #50060e,
+    #660303
+  );
+}

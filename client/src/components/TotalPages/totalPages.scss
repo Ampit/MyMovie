@@ -1,0 +1,26 @@
+@import "../../styles/partials/resets";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/breakpoints";
+
+.pagination {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  color: white;
+
+  &__links {
+    padding: 25px;
+    @include mobile {
+      padding: 8px;
+    }
+    &--color {
+      color: white;
+    }
+  }
+}
+
+.active {
+  color: red;
+  font-weight: bold;
+}
