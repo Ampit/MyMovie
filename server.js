@@ -5,6 +5,7 @@ const cookieSession = require("cookie-session");
 const passport = require("passport");
 const keys = require("./config/keys");
 const authRoutes = require("./routes/authRoutes");
+const path = require("path");
 require("./models/User");
 require("./services/passport");
 mongoose.connect(keys.mongoURI, {
