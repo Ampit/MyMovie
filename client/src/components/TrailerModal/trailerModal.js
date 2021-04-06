@@ -14,31 +14,31 @@ class Trailer extends Component {
     title: "",
     homepageURL: "",
     overview: "",
-    onNetflix: ""
+    onNetflix: "",
   };
 
   handleOpenModal = () => {
     axios
       .get(`${API_URL}movie/${this.props.Id}/videos?api_key=${API_KEY}`)
-      .then(response => {
+      .then((response) => {
         this.setState({
           url: `https://www.youtube.com/embed/${response.data.results[0].key}`,
-          showModal: true
+          showModal: true,
         });
       });
     axios
       .get(`${API_URL}movie/${this.props.Id}?api_key=${API_KEY}&language=en-US`)
-      .then(response => {
+      .then((response) => {
         this.setState({
           netflixId: response.data.imdb_id,
           title: response.data.title,
           overview: response.data.overview,
-          homepageURL: response.data.homepage
+          homepageURL: response.data.homepage,
         });
         this.isNetflix();
       });
   };
-  isEmpty = obj => {
+  isEmpty = (obj) => {
     for (var key in obj) {
       if (obj.hasOwnProperty(key)) return false;
     }
@@ -53,23 +53,22 @@ class Trailer extends Component {
           method: "GET",
           headers: {
             "x-rapidapi-host": "unogs-unogs-v1.p.rapidapi.com",
-            "x-rapidapi-key":
-              "32d35daf13msh711a5279a2b7097p16cfe0jsn4519bc915063"
-          }
+            "x-rapidapi-key": "Your Rapid API Key",
+          },
         }
       )
-      .then(response => {
+      .then((response) => {
         if (this.isEmpty(response.data)) {
           this.setState({
-            onNetflix: "No It is not available"
+            onNetflix: "No It is not available",
           });
         } else {
           this.setState({
-            onNetflix: "Yes It is available"
+            onNetflix: "Yes It is available",
           });
         }
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
   };
@@ -94,7 +93,7 @@ class Trailer extends Component {
           overlayClassName="Overlay"
         >
           <iframe
-          className="modal__iframe"
+            className="modal__iframe"
             id="ytplayer"
             type="text/html"
             width="750"
@@ -105,15 +104,19 @@ class Trailer extends Component {
             allowFullScreen
           ></iframe>
           <div className="modal__description">
-            <h2 className="modal__description--heading">
-              {this.state.title}
-            </h2>
+            <h2 className="modal__description--heading">{this.state.title}</h2>
             <h3></h3>
-            <h5 className="modal__description--overview">{this.state.overview}</h5>
+            <h5 className="modal__description--overview">
+              {this.state.overview}
+            </h5>
             <h4 className="modal__description--subheading">
               Netflix : {this.state.onNetflix}
             </h4>
-            <a className="modal__description--link" href={this.state.homepageURL} target="blank">
+            <a
+              className="modal__description--link"
+              href={this.state.homepageURL}
+              target="blank"
+            >
               Link to Movie
             </a>
           </div>
