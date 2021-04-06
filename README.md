@@ -2,4 +2,4 @@ React project that helps the user to find movies based on their mood. Users can 
 
 React / Node.js / Express / MongoDB / OAuth/ The Movie DataBase API
 
-[http://mymovie-d.herokuapp.com/](http://mymovie-d.herokuapp.com/)
+[Demo](http://mymovie-d.herokuapp.com/)
