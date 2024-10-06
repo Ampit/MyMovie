@@ -22,22 +22,26 @@ A React application that helps users find movies based on their mood. Users can 
 ## Setup
 
 1. Clone the repository:
+
    ```
    git clone https://github.com/your-username/movie-app.git
    cd movie-app
    ```
 
 2. Install dependencies:
+
    ```
    npm install
    ```
 
 3. Create a `.env` file in the root directory and add your TMDB API key:
+
    ```
    REACT_APP_TMDB_API_KEY=your_tmdb_api_key_here
    ```
 
 4. Start the development server:
+
    ```
    npm start
    ```
@@ -53,11 +57,3 @@ A React application that helps users find movies based on their mood. Users can 
 ## Deployment
 
 This app can be easily deployed to platforms like Vercel or Netlify. Make sure to set the environment variable for your TMDB API key in your deployment platform's settings.
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
