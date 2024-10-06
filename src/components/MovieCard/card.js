@@ -1,7 +1,7 @@
 import React from "react";
 import "./card.scss";
-import thumbnail from "../../assets/images/no-image-png-1/no-image-png-1-original.png";
 import StarRatings from "react-star-ratings";
+import thumbnail from "../../assets/images/no-image-png-1/no-image-png-1-original.png";
 
 const Cards = props => {
   return (

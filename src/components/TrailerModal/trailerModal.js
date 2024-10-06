@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import Modal from "react-modal";
 import "./trailerModal.scss";
 import axios from "axios";
-const API_URL = "https://api.themoviedb.org/3/";
-const API_KEY = "18c3782da003aade5577c69d80583477";
+import config from "../../config";
 
 Modal.setAppElement("#root");
 class Trailer extends Component {
@@ -19,7 +18,7 @@ class Trailer extends Component {
 
   handleOpenModal = () => {
     axios
-      .get(`${API_URL}movie/${this.props.Id}/videos?api_key=${API_KEY}`)
+      .get(`${config.API_URL}movie/${this.props.Id}/videos?api_key=${config.API_KEY}`)
       .then((response) => {
         this.setState({
           url: `https://www.youtube.com/embed/${response.data.results[0].key}`,
@@ -27,7 +26,7 @@ class Trailer extends Component {
         });
       });
     axios
-      .get(`${API_URL}movie/${this.props.Id}?api_key=${API_KEY}&language=en-US`)
+      .get(`${config.API_URL}movie/${this.props.Id}?api_key=${config.API_KEY}&language=en-US`)
       .then((response) => {
         this.setState({
           netflixId: response.data.imdb_id,
@@ -99,13 +98,14 @@ class Trailer extends Component {
             width="750"
             height="400"
             src={this.state.url}
+            title="Movie Trailer"
             border-radius="5"
             frameBorder="0"
             allowFullScreen
           ></iframe>
           <div className="modal__description">
             <h2 className="modal__description--heading">{this.state.title}</h2>
-            <h3></h3>
+            <h3>{this.state.someHeadingContent}</h3>
             <h5 className="modal__description--overview">
               {this.state.overview}
             </h5>
